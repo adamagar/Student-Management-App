@@ -1,12 +1,12 @@
 package com.project.contactmessage.entity;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.validation.constraints.Email;
-import jakarta.validation.constraints.NotNull;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotNull;
 import lombok.*;
 
 import java.time.LocalDateTime;
@@ -26,7 +26,7 @@ public class ContactMessage {
     private String name;
 
     @NotNull
-    @Email
+    @Email(message = "Please enter a valid email")
     private String email;
 
     @NotNull
